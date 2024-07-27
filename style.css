@@ -1,0 +1,115 @@
+body {
+  background-color: #fa994a;
+  scroll-behavior: smooth;
+  font-family: sans-serif;
+}
+.navbar {
+  padding: 1rem 0 !important;
+}
+.navbar-brand .todo-logo {
+  width: 50px;
+}
+.container-repo {
+  max-width: 60%;
+  width: 100%;
+  margin: 1rem auto;
+  position: relative;
+}
+.container-repo h2 {
+  color: #544633;
+  padding: 15px 100px;
+  font-weight: bold;
+  border-top: 0.5rem solid #544633;
+  border-bottom: 0.5rem solid #544633;
+  border-radius: 82px;
+}
+
+.todo-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.3rem 2.3rem;
+  background-color: #370d5f;
+  border-radius: 35px;
+  margin-top: 1.5rem;
+}
+.todo-list input {
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+}
+.todo-list button {
+  font-weight: 900;
+  background-color: #5e5e30;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  padding: 4px 12px;
+  cursor: pointer;
+  border: 0.09rem solid #00ff5e;
+  color: wheat;
+  transition: transform 0.5s ease;
+}
+.todo-list button:hover {
+  transform: scale(1.1);
+}
+.list-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 1rem;
+  padding: 20px 30px;
+  background-color: #370d5f;
+  border-radius: 35px;
+}
+.ul-list-data .edit-list,
+.delete-list {
+  background-color: red;
+  color: rgb(255 245 199);
+  border-radius: 5px;
+  font-size: 1.1rem;
+  padding: 5px 8px;
+  cursor: pointer;
+  border: 0.09rem solid #00ff5e;
+}
+
+.ul-list-data {
+  list-style-type: none;
+  padding: 2px 3px;
+}
+.no-record-list {
+  color: #eee;
+  font-style: italic;
+  font-size: 1rem;
+}
+.ul-list-data li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+  padding: 10px 5px;
+  background-color: blueviolet;
+  border-radius: 35px;
+}
+.span-bold {
+  font-weight: bold;
+}
+.ul-list-data li .span-text {
+  display: inline-block;
+  width: 100px; /* Adjust the width as needed */
+  text-align: left;
+  padding: 0 10px; /* Optional: add some padding */
+  text-transform: capitalize;
+  color: #fff7ce;
+}
+.ul-list-data li .span-text:nth-child(1) {
+  width: 50px;
+}
+.ul-list-data li .span-text:nth-child(2) {
+  width: 150px;
+}
+.ul-list-data li .span-text:nth-child(3) {
+  width: 200px;
+}
+.ul-list-data li .span-text:nth-child(4) {
+  width: 100px;
+}
