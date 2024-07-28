@@ -4,7 +4,8 @@ const ulList = document.querySelector("#ulList");
 const title = document.querySelector("#title");
 const desc = document.querySelector("#desc");
 const textSearch = document.querySelector("#text-search");
-
+const todoList = document.querySelector(".todo-list");
+const titlDesc = document.querySelector(".titl-desc");
 
 // ========================================= fixed navbar  here=========================================
 document.addEventListener("DOMContentLoaded", function () {
