@@ -6,6 +6,7 @@ const desc = document.querySelector("#desc");
 const textSearch = document.querySelector("#text-search");
 const searchBtn = document.querySelector("#search-btn");
 const todoList = document.querySelector(".todo-list");
+const titlDesc = document.querySelector(".titl-desc");
 
 // ========================================= fixed navbar  here=========================================
 document.addEventListener("DOMContentLoaded", function () {
@@ -96,8 +97,20 @@ function editData(index) {
   desc.value = storeData[index].descs;
   addList.innerHTML = `<i class="fa-sharp fa-solid fa-pen-to-square"></i>`;
   todoList.style.position = "fixed";
-  todoList.style.width = "60%";
   todoList.style.backgroundColor = "#5e5e30";
+  let threshold = 800,
+    thresHold = 600,
+    thres_Hold = 550;
+  let screenWidth = window.innerWidth;
+  if (screenWidth > threshold) {
+    todoList.style.width = "60%";
+  } else if (screenWidth > thresHold) {
+    todoList.style.width = "80%";
+  } else if (screenWidth > thres_Hold) {
+    todoList.style.width = "90%";
+  } else {
+    todoList.style.width = "96%";
+  }
 }
 
 //  ============= =============delete user data code =============================================================

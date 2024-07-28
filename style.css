@@ -15,9 +15,10 @@ body {
   margin: 1rem auto;
   position: relative;
 }
-.container-repo h2 {
+.container-repo .repo-head {
   color: #544633;
-  padding: 15px 100px;
+  text-align: center;
+  padding: 15px;
   font-weight: bold;
   border-top: 0.5rem solid #544633;
   border-bottom: 0.5rem solid #544633;
@@ -112,4 +113,61 @@ body {
 }
 .ul-list-data li .span-text:nth-child(4) {
   width: 100px;
+}
+
+/* ================ Resposive page start  from here =========================================*/
+
+@media only screen and (max-width: 1000px) {
+  
+  .container-repo .repo-head {
+    font-size: calc(1.5rem + 0.03vw);
+  }
+}
+@media only screen and (max-width: 920px) {
+  .ul-list-data li .span-text {
+  padding: 0 2px; /
+  }
+  .todo-list{
+    padding: 1.3rem 1rem;
+  }
+}
+@media only screen and (max-width: 815px) {
+ .container-repo{
+  max-width: 80%;
+ }
+}
+@media only screen and (max-width: 615px) {
+ .container-repo{
+  max-width: 90%;
+ }
+}
+@media only screen and (max-width: 550px) {
+ body {
+    background-color: lightblue;
+  }
+  .container-repo{
+  max-width: 96%;
+ }
+ .todo-list{
+  justify-content: space-around;
+ }
+.todo-list .titl-desc{
+     display: flex;
+     flex-direction: column;
+     gap: 20px;
+     justify-content: space-evenly;
+}
+.list-item {
+  padding: 20px 0;
+  }
+  .ul-list-data li .span-text:nth-child(2) {
+    width: 100px;
+}
+}
+
+
+@media only screen and (max-width: 392px) {
+.ul-list-data li .span-text:nth-child(4) {
+    width: 106px;
+}
 }
