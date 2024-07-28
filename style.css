@@ -157,6 +157,9 @@ body {
      gap: 20px;
      justify-content: space-evenly;
 }
+.titl-desc input{
+  padding: 8px 20px;
+}
 .list-item {
   padding: 20px 0;
   }
