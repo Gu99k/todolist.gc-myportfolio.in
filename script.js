@@ -4,9 +4,7 @@ const ulList = document.querySelector("#ulList");
 const title = document.querySelector("#title");
 const desc = document.querySelector("#desc");
 const textSearch = document.querySelector("#text-search");
-const searchBtn = document.querySelector("#search-btn");
-const todoList = document.querySelector(".todo-list");
-const titlDesc = document.querySelector(".titl-desc");
+
 
 // ========================================= fixed navbar  here=========================================
 document.addEventListener("DOMContentLoaded", function () {
@@ -64,7 +62,7 @@ function displayData() {
   ulList.innerHTML = "";
 
   if (storeData.length === 0) {
-    ulList.innerHTML = `<li class="no-record-list">No-record-found please inset your record...!</li>`;
+    ulList.innerHTML = `<li class="no-record-list">No-record-exist please inset your record...!</li>`;
   } else {
     storeData.forEach((element, index) => {
       console.log(storeData.length);
@@ -117,7 +115,7 @@ function editData(index) {
 const deleteData = (index) => {
   let confirmD = confirm("Make suore yon wana delete");
   if (!confirmD) {
-    alert("Your is safe ");
+    alert("Your data is safe ");
   } else {
     storeData.splice(index, 1);
     console.log(index);
@@ -127,6 +125,28 @@ const deleteData = (index) => {
 };
 
 // =========================================Search btn  start======================================
+
+const searchAllLi = document.querySelectorAll("#ulList li");
+textSearch.addEventListener("input", (e) => {
+  const searchStr = e.target.value.trim().toLowerCase();
+  ulList.innerHTML = "";
+  searchAllLi.forEach((element) => {
+    const span_in_li = element.querySelectorAll("span");
+    const matchText = span_in_li[1].innerText.toLowerCase();
+    const matchTextDesc = span_in_li[2].innerText.toLowerCase();
+    console.log(matchText);
+    if (
+      matchText.indexOf(searchStr) > -1 ||
+      matchTextDesc.indexOf(searchStr) > -1
+    ) {
+      ulList.appendChild(element);
+    }
+  });
+  if (ulList.innerHTML == "") {
+    ulList.innerHTML = `<i> No Record Found...</i>`;
+    ulList.style.color = "#eee";
+  }
+});
 
 // =========================================Search btn  start======================================
 // =========================================Edit Close btn  start======================================
